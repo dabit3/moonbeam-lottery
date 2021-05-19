@@ -1,8 +1,10 @@
 import {
   PlayerJoined,
   LotteryResult,
-} from "./types/MoonLotto/MoonLotto";
-import { Round, Player, Ticket } from "./types/schema";
+} from "../generated/MoonLotto/MoonLotto";
+import { Round, Player, Ticket } from "../generated/schema";
+
+import { log } from '@graphprotocol/graph-ts'
 
 export function handlePlayerJoined(event: PlayerJoined): void {
   // ID for the round:

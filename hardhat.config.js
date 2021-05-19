@@ -24,17 +24,17 @@ const productionPK = process.env.MOON_PRIVATE_KEY;
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  defaultNetwork: "moonbase",
+  defaultNetwork: "dev",
   networks: {
-    moonbase: {
-      url: "https://rpc.testnet.moonbeam.network",
-      accounts: [productionPK],
-      gasPrice: 0,
-      chainId: 1287,
-    },
+    // moonbase: {
+    //   url: "https://rpc.testnet.moonbeam.network",
+    //   accounts: [productionPK],
+    //   gasPrice: 0,
+    //   chainId: 1287,
+    // },
     dev: {
       url: "http://127.0.0.1:9933",
-      accounts: [developmentPK],
+      // accounts: [developmentPK],
       network_id: "1281",
       gasPrice: 0,
       chainId: 1281,
@@ -56,6 +56,6 @@ module.exports = {
   paths: {
     sources: "./contracts",
     cache: "./cache",
-    artifacts: "./artifacts",
+    artifacts: "./src/artifacts",
   },
 };
